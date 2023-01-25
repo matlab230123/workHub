@@ -28,6 +28,9 @@ group by category.name order by avg(length) desc;
 select category.name, avg(film.length) from film join film_category using(film_id) join category using (category_id)
 group by category.name having avg(film.length) > (select avg(length) from film);
 
+select film.title, l.name, c.name from film join film_category fc on film.film_id = fc.film_id
+join category c on fc.category_id = c.category_id inner join language l on film.language_id = l.language_id;
+
 
 
 SELECT * from staff;
