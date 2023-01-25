@@ -1,3 +1,33 @@
+⌨️ Labs
+
+👉 Use the Sakila Database 👉 Analyze the database tables to solve the queries below.
+
+❓ Which actors have the first name 'Scarlett'
+
+❓ Which actors have the last name 'Johansson'
+
+❓ How many distinct actors last names are there?
+
+❓ Which last names are not repeated?
+
+❓ Which last names appear more than once?
+
+❓ Which actor has appeared in the most films?
+
+❓ Is 'Academy Dinosaur' available for rent from Store 1?
+
+❓ Which copies of films are at Store 1?
+
+❓ Insert a record to represent Mary Smith renting 'Academy Dinosaur' from Mike Hillyer at Store 1 today .
+
+❓ Find the last or most recent rental?
+
+❓ What is that average length of all the films in the sakila DB?
+
+❓ What is the average length of films by category?
+
+❓ Which film categories are longer than the average lenght of all the films?
+
 
 USE SAKILA;
 Select * from actor where first_name = 'Scarlett';
