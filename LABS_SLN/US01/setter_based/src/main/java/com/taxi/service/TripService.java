@@ -1,7 +1,7 @@
-package com.demo;
+package com.taxi.service;
 
 import java.text.ParseException;
 
-public interface Trip {
+public interface TripService {
     void tripDetails() throws ParseException;
 }

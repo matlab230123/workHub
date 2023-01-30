@@ -5,20 +5,19 @@
     <!--    Payment creditPayment = new CreditPaymentImpl();-->
     <!--    creditPayment.pay();-->
     <bean name="Trip" class="com.demo.TripImpl">
-        <constructor-arg index="0" ref="Car"/>
-        <constructor-arg index="1" ref="Driver"/>
-        <constructor-arg index="2" ref="Passenger"/>
+        <constructor-arg index="0" ref="car"/>
+        <constructor-arg index="1" ref="driver"/>
+        <constructor-arg index="2" ref="passenger"/>
     </bean>
-    <bean id="Car" class="com.demo.Car">
+    <bean id="car" class="com.demo.Car">
         <constructor-arg index="0" value="Toyota"/>
         <constructor-arg index="1" value="Economy"/>
     </bean>
-    <bean id="Driver" class="com.demo.Driver">
+    <bean id="driver" class="com.demo.Driver">
         <constructor-arg index="0" value="Robin Hood"/>
         <constructor-arg index="1" value="4.5"/>
     </bean>
-    <bean id="Passenger" class="com.demo.Passenger">
+    <bean id="passenger" class="com.demo.Passenger">
         <constructor-arg value="Jackie Chan"/>
     </bean>
-
 </beans>

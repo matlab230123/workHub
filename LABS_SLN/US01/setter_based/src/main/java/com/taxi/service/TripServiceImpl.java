@@ -1,45 +1,37 @@
-package com.demo;
+package com.taxi.service;
+
+import com.taxi.models.Car;
+import com.taxi.models.Driver;
+import com.taxi.models.Passenger;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.Locale;
 import java.util.UUID;
 
-public class TripImpl implements Trip{
+public class TripServiceImpl implements TripService{
 
     private UUID tripId;
     private Car car;
     private Driver driver;
     private Passenger passenger;
 
-    public TripImpl(Car car, Driver driver, Passenger passenger) {
-        this.tripId = UUID.randomUUID();
+    public void setCar(Car car) {
         this.car = car;
+    }
+
+    public void setDriver(Driver driver) {
         this.driver = driver;
+    }
+
+    public void setPassenger(Passenger passenger) {
         this.passenger = passenger;
     }
 
-    public UUID getTripId() {
-        return tripId;
-    }
-
-    public Car getCar() {
-        return car;
-    }
-
-    public Driver getDriver() {
-        return driver;
-    }
-
-    public Passenger getPassenger() {
-        return passenger;
-    }
-
-    @Override
     public void tripDetails() throws ParseException {
+        this.tripId = UUID.randomUUID();
         DateTimeFormatter sdFormat = DateTimeFormatter.ofPattern("dd-MM-yy HH:mm:ss");
         String start = sdFormat.format(LocalDateTime.now().minusMinutes(20));
         String end = sdFormat.format(LocalDateTime.now());
@@ -49,7 +41,6 @@ public class TripImpl implements Trip{
                 "\nDriver: " + driver.getFullName() + ", rating: " + driver.getRating() +
                 "\nPassenger: " + passenger.getName() +
                 "\nCar: " + car.getModel() + ", model: " + car.getModel() + ", type: " +car.getType() +
-                "\nTrip started at: " + start + "\nTrip ended: " + end
-        );
+                "\nTrip started at: " + start + "\nTrip ended: " + end);
     }
 }

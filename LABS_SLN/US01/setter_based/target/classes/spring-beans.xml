@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    Payment creditPayment = new CreditPaymentImpl();-->
+    <!--    creditPayment.pay();-->
+
+    <bean id="car" class="com.taxi.models.Car">
+    </bean>
+    <bean id="driver" class="com.taxi.models.Driver">
+    </bean>
+    <bean id="passenger" class="com.taxi.models.Passenger">
+    </bean>
+    <bean id="trip" class="com.taxi.service.TripServiceImpl">
+        <property name="car" ref="car"/>
+        <property name="driver" ref="driver"/>
+        <property name="passenger" ref="passenger"/>
+    </bean>
+</beans>
