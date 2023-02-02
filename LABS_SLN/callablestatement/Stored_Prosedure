@@ -1,0 +1,7 @@
+CREATE DEFINER=`matlab`@`%` PROCEDURE `GetAllActors`(IN language varchar(10))
+BEGIN
+	select f.title, l.name, c.name from film f
+    join language l using (language_id)
+    join film_category fc using (film_id)
+    join category c using (category_id) where l.name=language;
+END
