@@ -1,0 +1,17 @@
+#spring.datasource.url="jdbc:mysql://localhost:3306/LIBRARYDB?useSSL=false";
+#spring.datasource.username=root
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/LIBRARYDB?useSSL=false
+    username: matlab
+    password: matlab
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hbm2ddl:
+          auto: update
+        format_sql: true
+    show-sql: true
+
+
